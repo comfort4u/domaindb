@@ -35,6 +35,15 @@ function setDescription(desc) {
     setInnerTextById('content-desc', desc);
 }
 
+function setDescriptionHTML(desc) {
+    document.getElementById('content-desc').innerHTML = desc;
+}
+
+function hideMiniData() {
+    document.getElementById('md-owner').remove();
+    document.getElementById('md-report').remove();
+}
+
 function addBread(domain, isActive) {
     var e = document.getElementById('domain-level');
     var li = document.createElement('li');
@@ -55,6 +64,16 @@ function addBread(domain, isActive) {
     e.appendChild(li);
 }
 
+var queryDomain;
+
+function setDBNotFound() {
+    setFQDN(queryDomain);
+    hideMiniData();
+    setDescriptionHTML("This domain is not found in database. " +
+        'Please report us by ' +
+        '<a href="https://github.com/mkaraki/domaindb/issues/new/choose">GitHub Issue</a>');
+}
+
 window.onload = function () {
     setFQDN('Loading');
     setOwner('unknown');
@@ -69,8 +88,11 @@ window.onload = function () {
     }
     addBread(domains[domains.length - 1], true);
 
+    queryDomain = search_domain;
+
     var jslink = 'db/' + domains.join('/') + '/js.js'
     var scriptnode = document.createElement('script');
     scriptnode.setAttribute('src', jslink);
+    scriptnode.setAttribute('onerror', 'setDBNotFound();');
     document.getElementById('body').appendChild(scriptnode);
 };
