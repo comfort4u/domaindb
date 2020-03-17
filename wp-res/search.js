@@ -89,6 +89,7 @@ window.onload = function () {
     addBread(domains[domains.length - 1], true);
 
     queryDomain = search_domain;
+    document.title = queryDomain + ' - domain-db';
 
     var jslink = 'db/' + domains.join('/') + '/js.js'
     var scriptnode = document.createElement('script');
