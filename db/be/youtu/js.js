@@ -14,4 +14,4 @@ setReporter('mkaraki');
 setReportDate('2020/03/17');
 
 // Set description (in English)
-setDescription("Link for youtube.com");
+setDescription("Domain hack (youtube.com)");
