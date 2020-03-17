@@ -44,7 +44,7 @@ function hideMiniData() {
     document.getElementById('md-report').remove();
 }
 
-function addBread(domain, isActive) {
+function addBread(domain, fqdn, isActive) {
     var e = document.getElementById('domain-level');
     var li = document.createElement('li');
     if (isActive) {
@@ -58,7 +58,7 @@ function addBread(domain, isActive) {
 
         var a = document.createElement('a');
         a.innerText = domain;
-        a.setAttribute('href', 'search.html?q=' + domain);
+        a.setAttribute('href', 'search.html?q=' + fqdn);
         li.appendChild(a);
     }
     e.appendChild(li);
@@ -84,9 +84,9 @@ window.onload = function () {
     var search_domain = input.trim().toLowerCase();
     var domains = search_domain.split('.').reverse();
     for (var i = 0; i < domains.length - 1; i++) {
-        addBread(domains[i], false);
+        addBread(domains[i], domains.slice(0, i + 1).reverse().join('.'), false);
     }
-    addBread(domains[domains.length - 1], true);
+    addBread(domains[domains.length - 1], undefined, true);
 
     queryDomain = search_domain;
     document.title = queryDomain + ' - domain-db';
