@@ -69,9 +69,14 @@ var queryDomain;
 function setDBNotFound() {
     setFQDN(queryDomain);
     hideMiniData();
+
+    var issueurl =
+        "https://github.com/mkaraki/domaindb/issues/new?" +
+        "assignees=&labels=&template=new-domain-request.md&title=%5BREQUEST%5D%20" + queryDomain;
+
     setDescriptionHTML("This domain is not found in database. " +
         'Please report us by ' +
-        '<a href="https://github.com/mkaraki/domaindb/issues/new/choose">GitHub Issue</a>');
+        '<a href="' + issueurl + '">GitHub Issue</a>');
 }
 
 window.onload = function () {
