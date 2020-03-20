@@ -4,9 +4,6 @@ setFQDN('microsoft.com');
 // Owner name (or company name)
 setOwner('Microsoft Corporation');
 
-// Owner websize (or company website)
-setOwnerUrl('https://microsoft.com/');
-
 // Your name
 setReporter('mkaraki');
 

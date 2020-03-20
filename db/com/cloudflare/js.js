@@ -2,10 +2,8 @@
 setFQDN('cloudflare.com');
 
 // Owner name (or company name)
-setOwner('Cloudflare');
-
-// Owner websize (or company website)
-setOwnerUrl('https://www.cloudflare.com/');
+setOwner('CloudFlare, Inc.');
+setNotValidated();
 
 // Your name
 setReporter('mkaraki');

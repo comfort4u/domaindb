@@ -12,7 +12,7 @@ function setInnerTextById(id, innerText) {
 }
 
 function setFQDN(fqdn) {
-    setInnerTextById("content-fqdn", fqdn);
+    setInnerTextById("content-fqdn", fqdn + ' ');
 }
 
 function setReporter(reporter) {
@@ -77,6 +77,14 @@ function setDBNotFound() {
     setDescriptionHTML("This domain is not found in database. " +
         'Please report us by ' +
         '<a href="' + issueurl + '">GitHub Issue</a>');
+}
+
+function setNotValidated() {
+    var badge = document.createElement('span');
+    badge.setAttribute('class', 'badge badge-secondary notvalidation-badge');
+    badge.setAttribute('title', 'This data may contain not validated or not trustable information.');
+    badge.innerText = '?';
+    document.getElementById('content-fqdn').appendChild(badge);
 }
 
 window.onload = function () {

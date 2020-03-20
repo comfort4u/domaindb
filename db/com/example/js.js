@@ -4,9 +4,6 @@ setFQDN('example.com');
 // Owner name (or company name)
 setOwner('Internet Assigned Numbers Authority');
 
-// Owner websize (or company website)
-setOwnerUrl('https://www.iana.org/');
-
 // Your name
 setReporter('mkaraki');
 

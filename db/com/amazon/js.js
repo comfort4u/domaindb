@@ -2,10 +2,7 @@
 setFQDN('amazon.com');
 
 // Owner name (or company name)
-setOwner('Amazon.com, Inc.');
-
-// Owner websize (or company website)
-setOwnerUrl('https://www.amazon.com');
+setOwner('Amazon Technologies, Inc.');
 
 // Your name
 setReporter('mkaraki');

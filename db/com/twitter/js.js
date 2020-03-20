@@ -4,9 +4,6 @@ setFQDN('twitter.com');
 // Owner name (or company name)
 setOwner('Twitter, Inc.');
 
-// Owner websize (or company website)
-setOwnerUrl('https://twitter.com');
-
 // Your name
 setReporter('mkaraki');
 

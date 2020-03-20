@@ -1,6 +1,6 @@
 // js.js for domaindb project.
 setFQDN('github.com')
-setOwner("GitHub")
+setOwner("GitHub, Inc.")
 setOwnerUrl("https://github.com")
 setReporter("mkaraki")
 setReportDate('2020/03/17')

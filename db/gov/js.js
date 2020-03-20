@@ -1,7 +1,6 @@
-// js.js for domaindb project.
-setFQDN('gov')
-setOwner("General Services Administration")
-setOwnerUrl("http://www.gsa.gov/")
-setReporter("mkaraki")
-setReportDate('2020/03/18')
-setDescription("")
+﻿// Data from IANA Root Zone Database (https://www.iana.org/domains/root/db) (2020/03/20)
+setFQDN('gov');
+setOwner("General Services Administration Attn: QTDC, 2E08 (.gov Domain Registration)");
+setReporter('mkaraki');
+setReportDate('2020/03/20')
+setDescriptionHTML('Data from <a href="https://www.iana.org/domains/root/db">IANA Root Zone Database</a>');

@@ -1,4 +1,7 @@
-.breadcrumb-item+.breadcrumb-item::before
-{
+.breadcrumb-item+.breadcrumb-item::before {
   content: "." !important;
+}
+
+.notvalidation-bagde {
+  cursor: help;
 }

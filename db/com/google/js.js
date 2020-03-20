@@ -4,9 +4,6 @@ setFQDN('google.com');
 // Owner name (or company name)
 setOwner('Google LLC');
 
-// Owner websize (or company website)
-setOwnerUrl('https://about.google/');
-
 // Your name
 setReporter('mkaraki');
 

@@ -1,17 +1,6 @@
-// Set FQDN
+﻿// Data from IANA Root Zone Database (https://www.iana.org/domains/root/db) (2020/03/20)
 setFQDN('com');
-
-// Owner name (or company name)
-setOwner('Verisign');
-
-// Owner websize (or company website)
-setOwnerUrl('https://www.verisign.com/en_US/domain-names/com-domain-names/index.xhtml');
-
-// Your name
+setOwner("VeriSign Global Registry Services");
 setReporter('mkaraki');
-
-// Set Current Date (YYYY/MM/DD)
-setReportDate('2020/03/17');
-
-// Set description (in English)
-setDescription("gTLD");
+setReportDate('2020/03/20')
+setDescriptionHTML('Data from <a href="https://www.iana.org/domains/root/db">IANA Root Zone Database</a>');

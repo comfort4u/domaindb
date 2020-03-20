@@ -4,9 +4,6 @@ setFQDN('youtube.com');
 // Owner name (or company name)
 setOwner('Google LLC');
 
-// Owner websize (or company website)
-setOwnerUrl('https://google.com');
-
 // Your name
 setReporter('mkaraki');
 
