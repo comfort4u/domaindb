@@ -93,6 +93,16 @@ function unHTMLEscape(str) {
     return d.innerText;
 }
 
+function applyData(data) {
+    setFQDN(data['FQDN']);
+    setOwner(data['Owner'])
+    if (data['OwnerUrl'] != null) setOwnerUrl(data['OwnerUrl']);
+    setReporter(data['Reporter']);
+    setReportDate(data['ReportDate'].split('T')[0]);
+    setDescriptionHTML(data['Description']);
+    if (!data['Trustable']) setNotValidated();
+}
+
 window.onload = function () {
     setFQDN('Loading');
     setOwner('unknown');
@@ -112,9 +122,13 @@ window.onload = function () {
     queryDomain = search_domain;
     document.title = queryDomain + ' - domain-db';
 
-    var jslink = 'db/' + domains.join('/') + '/js.js'
-    var scriptnode = document.createElement('script');
-    scriptnode.setAttribute('src', jslink);
-    scriptnode.setAttribute('onerror', 'setDBNotFound();');
-    document.getElementById('body').appendChild(scriptnode);
+    var jsonlink = 'db/' + domains.join('/') + '/info.json'
+
+    $.ajax({
+        type: "get",
+        url: jsonlink,
+        data: {},
+        dataType: "json",
+        timeout: 1000
+    }).done(applyData).fail(setDBNotFound);
 };
