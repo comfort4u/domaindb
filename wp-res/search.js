@@ -87,13 +87,19 @@ function setNotValidated() {
     document.getElementById('content-fqdn').appendChild(badge);
 }
 
+function unHTMLEscape(str) {
+    var d = document.createElement('a');
+    d.innerHTML = str;
+    return d.innerText;
+}
+
 window.onload = function () {
     setFQDN('Loading');
     setOwner('unknown');
     setReporter('unknown');
     setReportDate('')
 
-    var input = getParam('q');
+    var input = unHTMLEscape(getParam('q'));
     var search_domain = input.trim().toLowerCase();
     var domains = search_domain.split('.').reverse();
     for (var i = 0; i < domains.length - 1; i++) {
