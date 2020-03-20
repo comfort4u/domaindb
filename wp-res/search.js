@@ -61,7 +61,7 @@ function addBread(domain, fqdn, isActive) {
         a.setAttribute('href', 'search.html?q=' + fqdn);
         li.appendChild(a);
     }
-    e.appendChild(li);
+    e.prepend(li);
 }
 
 var queryDomain;
