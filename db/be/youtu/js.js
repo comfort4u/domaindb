@@ -1,20 +1,8 @@
-// Set FQDN
-setFQDN('youtu.be');
-
-// Owner name (or company name)
-setOwner('Google LLC');
-
-// Owner websize (or company website)
-setOwnerUrl('https://google.com');
-
-// Your name
-setReporter('mkaraki');
-
-// Set Current Date (YYYY/MM/DD)
-setReportDate('2020/03/17');
-
-// Set description (in English)
-setDescription("Domain hack (youtube.com)");
-
-// Data from not trusted source
+// js.js for domaindb project.
+setFQDN('youtu.be')
+setOwner("Google LLC")
+setOwnerUrl("https://google.com")
+setReporter("mkaraki")
+setReportDate('2020/03/17')
+setDescription("")
 setNotValidated();
