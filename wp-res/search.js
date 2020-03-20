@@ -93,6 +93,8 @@ window.onload = function () {
     }
     addBread(domains[domains.length - 1], undefined, true);
 
+    document.getElementById('searchbox').setAttribute('value', search_domain);
+
     queryDomain = search_domain;
     document.title = queryDomain + ' - domain-db';
 
