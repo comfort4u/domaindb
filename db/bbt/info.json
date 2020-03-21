@@ -1,1 +1,1 @@
-﻿{"FQDN":"bbt","Owner":"BB&T Corporation","OwnerUrl":null,"Reporter":"mkaraki","ReportDate":"2020-03-20T00:00:00","Description":"Data from <a href=\"https://www.iana.org/domains/root/db\">IANA Root Zone Database</a>","Trustable":true}
+﻿{"Description":"Data from \u003ca href=\"https://www.iana.org/domains/root/db\"\u003eIANA Root Zone Database\u003c/a\u003e","FQDN":"bbt","Reporter":"mkaraki","Trustable":true,"Owner":"BB\u0026T Corporation","OwnerUrl":null,"ReportDate":"2020-03-21"}
