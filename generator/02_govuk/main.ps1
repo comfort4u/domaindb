@@ -3,7 +3,7 @@ $csvi = Import-Csv .\domains.csv
 for ($i = 0; $i -lt $csvi.length; $i++) {
     Write-Host $i 'of' $csvi.length
     $domain = $csvi[$i].'Domain: Domain Name'.ToLower()
-    $manager = $csvi[$i].'Organization'
+    $manager = $csvi[$i].'Organisation'
 
     $domainsplit = $domain.Split('.');
     [array]::Reverse($domainsplit);
