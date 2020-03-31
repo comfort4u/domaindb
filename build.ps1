@@ -6,5 +6,5 @@ foreach ($dir in $dirs) {
     $cdbpath = Join-Path ".\generator" $customdb
  
     Write-Host $dir
-    Copy-Item -Path $cdbpath -Recurse -Destination $dbdir
+    Copy-Item -Path $cdbpath -Recurse -Destination $dbdir  -ErrorAction SilentlyContinue
 }

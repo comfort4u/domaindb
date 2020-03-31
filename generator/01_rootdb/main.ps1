@@ -6,7 +6,7 @@ for ($i = 0; $i -lt $csvi.length; $i++) {
     $manager = $csvi[$i].'TLD Manager'
 
     $basedir = ".\db\$($domain)";
-    New-Item $basedir -ItemType Directory
+    New-Item $basedir -ItemType Directory -ErrorAction SilentlyContinue
 
     $data = @{
         FQDN        = $domain;
