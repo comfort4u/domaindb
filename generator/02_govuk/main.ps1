@@ -3,13 +3,13 @@ $csvi = Import-Csv .\domains.csv
 for ($i = 0; $i -lt $csvi.length; $i++) {
     Write-Host $i 'of' $csvi.length
     $domain = $csvi[$i].'Domain: Domain Name'.ToLower()
-    $manager = $csvi[$i].'Organisation'
+    $manager = $csvi[$i].'Organization'
 
     $domainsplit = $domain.Split('.');
     [array]::Reverse($domainsplit);
 
     $basedir = ".\db\$($domainsplit -join '\')"
-    New-Item $basedir -ItemType Directory
+    New-Item $basedir -ItemType Directory -ErrorAction SilentlyContinue
 
     $data = @{
         FQDN        = $domain;

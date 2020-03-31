@@ -9,14 +9,14 @@ for ($i = 0; $i -lt $csvi.length; $i++) {
     [array]::Reverse($domainsplit);
 
     $basedir = ".\db\$($domainsplit -join '\')"
-    New-Item $basedir -ItemType Directory
+    New-Item $basedir -ItemType Directory -ErrorAction SilentlyContinue
 
     $data = @{
         FQDN        = $domain;
         Owner       = $manager;
         OwnerUrl    = $null;
         Reporter    = "mkaraki";
-        ReportDate  = "2020-03-21";
+        ReportDate  = "2020-03-31";
         Description = "Data from <a href=`"https://home.dotgov.gov/data/`">DotGov</a> published <a href=`"https://raw.githubusercontent.com/GSA/data/master/dotgov-domains/current-full.csv`">csv file</a>";
         Trustable   = $true;
     }
