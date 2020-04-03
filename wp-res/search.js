@@ -76,7 +76,8 @@ function setDBNotFound() {
 
     setDescriptionHTML("This domain is not found in database. " +
         'Please report us by ' +
-        '<a href="' + issueurl + '">GitHub Issue</a>');
+        '<a href="' + issueurl + '">GitHub Issue</a>' +
+        '<br />Some domain contains parent domain. Click Breadcrumb to access it.');
 }
 
 function setNotValidated() {
